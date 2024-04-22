@@ -33,7 +33,7 @@ x <-rnorm(10)
 plot(x)
 hist(x)
 
-
+?rnorm
 X <- rnorm(7)
 x
 X <- rnorm( 7, 10, 2)
@@ -46,6 +46,21 @@ X <- rnorm(7, sd=2, mean=10)
 x
 X <- rnorm(5, sd=2)
 x
+
+#CW
+# Generate the vector of numbers
+x <-rnorm(100000)
+x
+
+# count how many are between -1 and 1
+count <- 0
+for (i in x)
+  if (i>-1 & i<1)
+    count <- count+1
+
+# Get and print the percentage, should be around 68%
+percent <- count/length(x)
+percent
 
 # Valid Function calls
 x <-rnorm(80000)
